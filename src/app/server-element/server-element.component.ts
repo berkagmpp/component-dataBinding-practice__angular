@@ -1,3 +1,4 @@
+import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent implements OnInit {
+    element: {type: string, name: string, content: string};
+    
     constructor() { }
 
     ngOnInit(): void {
