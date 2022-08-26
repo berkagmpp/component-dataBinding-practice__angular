@@ -1,5 +1,4 @@
-import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'app-server-element',
@@ -7,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent implements OnInit {
-    element: {type: string, name: string, content: string};
+    @Input() element: {type: string, name: string, content: string};
     
     constructor() { }
 
